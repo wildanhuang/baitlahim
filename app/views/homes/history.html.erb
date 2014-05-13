@@ -1,1 +1,43 @@
-history.html.erb
+<script type="text/javascript">
+  $(function() {
+    $(".history_button").popover({ animation: true, trigger: 'click' })
+  });
+</script>
+
+<div class="jumbotron transparent">
+  <div class="container">
+    <h1>Sejarah <small>Gereja Baptis Indonesia</small> Baitlahim <small>Bandung</small></h1>
+    <p>
+      Selamat datang di halaman sejarah tentang kami, Gereja Baptis Indonesia Baitlahim Bandung.. Pada halaman ini menjabarkan sejarah tentang siapa dan berawal dari mana Gereja kami..
+    </p>
+  </div>
+</div>
+
+<%
+  content1 = 'Gereja Baptis Indonesia Baitlahim Bandung dimulai pada tahun 1954 di rumah anggota Gereja Baptis Pertama Bandung, Diakon Mathias. Pelayanan di mulai dengan pelayanan Sekolah Minggu di Jl. Jendral Sudirman oleh Bapak dan Ibu Diakon Mathias bersama beberapa orang guru Sekolah Minggu dari Gereja Baptis Pertama Bandung. Kehadiran Sekolah Minggu pada saat itu di hadiri rata-rata 40 orang anak. Keluarga Widarma yang tinggal dekat rumah Diakon Mathias merelakan rumahnya digunakan untuk pelayanan sekolah minggu. Dan selanjutnya seluruh kegiatan dialihkan ke tempat yang baru. Di tempat ini kebaktian diadakan pagi dan sore hari. Selain Sekolah Minggu, diadakan juga kegiatan Persatuan Latihan untuk Kaum Muda dan Persekutuan Wanita. '
+
+  content2 = 'Pdt. Ishak Iskandar dengan 25 anggota gereja bertekad mengorganisasikan diri dengan nama "Gereja Baptis Raya Barat". Dengan dasar ayat, Markus 16:15 "Pergilah ke seluruh dunia beritakanlah Injil kepada segala makhluk". Pada masa itu Miss Ditsworth dari misi baptis juga terlibat melayani. '
+
+  content3 = 'Pada Juli 1965 Pdt Ishak Iskandar terpanggil melayani di tempat lain dan Pdt. Daniel Marantika yang menjadi Gembala Sidang menggantikan beliau.'
+
+  content4 = 'Tahun 1966 perubahan nama Gereja Raya Barat menjadi "Gereja Baptis Baitlahim" yang berarti gudang gandum.'
+
+  content5 = 'Dibuka dua cabang gereja yaitu di Jl. Natawijaya (rumah diakon Harun Slamet) dan di Gang Beureum.'
+
+  content6 = 'Tahun 1967 cabang Natawijaya mengorganisasikan diri dan bernama "Gereja Baptis Indonesia Immanuel".'
+
+  content7 = 'Tahun 1967 gereja turut mengsukseskan GEHIBA atau Gerakan Hidup Baru yaitu suatu kebangunan rohani tingkat nasional.'
+
+  content8 = 'Pada tahun 1968 pelayanan berjalan terus dan berkembang sehingga pada masa itu ada 154 orang anggota gereja.'
+%>
+
+<div class="container text-center">
+  <%= popover_history_button('1954', 'left', '1954', content1) %><br/><br/>
+  <%= popover_history_button('1962', 'right', '14 Maret 1962', content2) %><br/><br/>
+  <%= popover_history_button('1965', 'left', 'Juli 1965', content3) %><br/><br/>
+  <%= popover_history_button('1966', 'right', '1966', content4) %><br/><br/>
+  <%= popover_history_button('1966', 'left', '1966', content5) %><br/><br/>
+  <%= popover_history_button('1967', 'right', '1967', content6) %><br/><br/>
+  <%= popover_history_button('1967', 'left', '1967', content7) %><br/><br/>
+  <%= popover_history_button('1968', 'right', '1968', content8) %><br/><br/>
+</div>
