@@ -5,7 +5,7 @@ ruby '2.1.0'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
-# Devise
+# Devise 
 gem 'devise'
 
 gem 'omniauth'
