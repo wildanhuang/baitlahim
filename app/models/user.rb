@@ -4,5 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, 
     :rememberable, :trackable, :validatable, :confirmable, :omniauthable
 
+  has_one :contact_information
   belongs_to :role
 end

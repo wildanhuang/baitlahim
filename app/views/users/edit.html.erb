@@ -1,0 +1,54 @@
+<div class="jumbotron transparent">
+  <div class="container">
+    <h1><small>Update Contact Information</small></h1>
+    <p>
+      Please enter your valid contact information to our website..
+      <br/>
+      If you have problems, please contact our administrator..
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <%= form_for @user, url: user_path, method: :patch, html: { :class => 'form-horizontal' } do |f| %>
+    <div class="form-group">
+      <%= f.label :first_name, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-8">
+        <%= f.text_field :first_name, autofocus: true, :class => "form-control", :placeholder => "Enter your first name" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :last_name, :class => "col-sm-2 control-label" %>
+      <div class="col-sm-8">
+        <%= f.text_field :last_name, autocomplete: "off", :class => "form-control", :placeholder => "Enter your last name" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag "baptist_number", "Baptist Number", :class => "col-sm-2 control-label" %>
+      <div class="col-sm-8">
+        <%= text_field_tag "contact_information[baptist_number]", (@user.contact_information.baptist_number rescue ""), :class => "form-control", :placeholder => "Enter your baptist number" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag "gender", "Gender", :class => "col-sm-2 control-label" %>
+      <div class="col-sm-8">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <input type="radio">
+          </span>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-8">
+        <%= f.submit "Update", :class => "btn btn-default btn-lg" %>
+      </div>
+    </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,105 @@
+<div class="jumbotron transparent">
+  <div class="container">
+    <h1><small>Contact Information</small></h1>
+    <p>
+      Selamat datang di halaman tentang kami, Gereja Baptis Indonesia Baitlahim Bandung.. Pada halaman ini menjelaskan secara singkat siapa dan berawal dari mana Gereja kami..
+    </p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <%= label_tag "first_name", "First name", :class => "control-label" %>
+    </div>
+    <div class="col-md-8">
+      <%= label_tag "first_name", (@user.first_name.present? ? @user.first_name : "Please fill your contact information") %>
+    </div>
+    <div class="col-md-1">
+      <%= link_to edit_user_path(id: @user.id) do %>
+        <span class='glyphicon glyphicon-pencil'></span> Edit
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <%= label_tag "last_name", "Last name", :class => "control-label" %>
+    </div>
+    <div class="col-md-8">
+      <%= label_tag "last_name", @user.last_name.present? ? @user.last_name : "" %>
+    </div>
+  </div>
+
+  <% if @user.contact_information %>
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "baptist_number", "Baptist number", :class => "control-label" %>
+      <div class="col-md-8">
+        <%= label_tag "baptist_number", @user.baptist_number %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "birthday", "Birthday", :class => "control-label" %>
+      </div>
+      <div class="col-md-8">
+        <%= label_tag "birthday", @user.contact_information.birthday %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "address", "Address", :class => "control-label" %>
+      </div>
+      <div class="col-md-8">
+        <%= label_tag "address", @user.contact_information.address %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "postal_code", "Postal code", :class => "control-label" %>
+      </div>
+      <div class="col-md-8">
+        <%= label_tag "postal_code", @user.contact_information.postal_code %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "phone", "Phone", :class => "control-label" %>
+      </div>
+      <div class="col-md-8">
+        <%= label_tag "phone", @user.contact_information.phone %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "gender", "Gender", :class => "control-label" %>
+      </div>
+      <div class="col-md-8">
+        <%= label_tag "gender", @user.contact_information.gender %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "job_description", "Jobs", :class => "control-label" %>
+      </div>
+      <div class="col-md-8">
+        <%= label_tag "job_description", @user.contact_information.job_description %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag "website", "Website", :class => "control-label" %>
+      </div>
+      <div class="col-md-8">
+        <%= label_tag "website", @user.contact_information.website %>
+      </div>
+    </div>
+  <% end %>
+</div>

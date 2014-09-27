@@ -20,7 +20,9 @@ Rails.application.routes.draw do
       get 'about_us'
       get 'history'
     end
-  end
+  end 
+
+  resources :users
 
   # Example resource route with options:
   #   resources :products do
